@@ -446,6 +446,8 @@ def main(_):
 
 
 if __name__ == '__main__':
+  # os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  
+  # os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
   logging.set_verbosity(logging.INFO)
   define_classifier_flags()
   flags.mark_flag_as_required('data_dir')
