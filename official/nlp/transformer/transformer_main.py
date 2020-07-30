@@ -421,6 +421,11 @@ class TransformerTask(object):
       callbacks.append(
           tf.keras.callbacks.ModelCheckpoint(
               ckpt_full_path, save_weights_only=True))
+    
+    logs = "/tmp/logs/" + "transformer_gpu"
+
+    tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs)
+    callbacks.append(tboard_callback)
     return callbacks
 
   def _load_weights_if_possible(self, model, init_weight_path=None):

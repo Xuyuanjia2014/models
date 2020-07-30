@@ -1,0 +1,11 @@
+type: 'retinanet'
+train:
+  train_file_pattern: /root/disk/tensorflow-datasource/coco-small/train*
+  total_steps: 1
+  batch_size: 8
+use_tpu: False
+architecture:
+  use_bfloat16: False
+  # eval:
+  #  eval_file_pattern: /root/disk/tensorflow-model/retinanet/evl*
+  #  val_json_file: /root/disk/tensorflow-model/retinanet/instances_val2017.json
